@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+    --primary-background: #0B131E;
+    --box-color: #202B3B;
+    --font: "Lexend Deca", sans-serif;
+    --title-font-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: var(--primary-background);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    padding: 10px;
+}
+
+.search-container {
+    display: flex;
+    width: 100%;
+}
+
+.search-bar {
+    width: calc(100% - 505px); /* Leaves space for the right side box */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    background: var(--box-color);
+    border-style: none;
+    color: white;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    margin-top: 10px;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column; /* Stack boxes 1, 2, 3 vertically */
+    flex: 3;
+    gap: 10px;
+}
+
+.box {
+    background: var(--box-color);
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    border-radius: 20px;
+    color: var(--title-font-color);
+}
+
+.box1 {
+    background: var(--primary-background) !important;
+    font-size: 50px;
+}
+
+.side-box {
+    background: var(--box-color);
+    flex: 1;
+    height: calc(100vh - 70px); /* Full height minus space for the search bar */
+    padding: 20px;
+    text-align: left;
+    border-radius: 20px;
+    margin-left: 10px;
+    color: var(--title-font-color);
+}
+
+/* Flexbox for aligning text and image */
+.box1 {
+    display: flex;               /* Enable flexbox layout */
+    justify-content: space-between; /* Space between text and image */
+    align-items: center;        /* Center vertically */
+    padding: 10px;             /* Add some padding */
+    margin: 10px;              /* Optional: Add some margin */
+}
+
+/* Styles for the content (text) on the left */
+.box1 .content {
+    display: flex;              /* Enable flexbox for the content */
+    flex-direction: column;     /* Stack text vertically */
+}
+
+/* Styles for the image container */
+.box1 .image-container {
+    margin-left: 20px;         /* Add space between the text and image */
+}
+
+.box1 .image-container img {
+    max-width: 200px;          /* Adjust size as needed */
+    height: auto;              /* Keeps aspect ratio */
+}
+
+
+.forecast-container {
+    display: flex;
+    overflow-x: scroll; /* Allows horizontal scrolling */
+    height: 100%; /* Full height of the parent */
+}
+
+.forecast-box {
+    flex: 0 0 150px; /* Fixed width for each box (adjust as needed) */
+    height: 80%; /* Full height of the parent */
+    border: none; /* Add a border for visibility */
+    margin-right: 5px; /* Space between boxes */
+    margin-top: 20px;
+    display: flex; /* Centering contents */
+    flex-direction: column; /* Stack temperature and time vertically */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items horizontally */
+    transition: border 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+
+}
+
+.time {
+    margin: 0; /* Remove default margin */
+}
+
+
+.current-hour {
+    border: 1px solid white; /* White border */
+    background-color: rgba(255, 255, 255, 0.1); /* Optional: Light background color */
+}
+
+.forecast-box.current-hour {
+    border: 2px solid white !important; /* Use !important if necessary */
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker for better visibility */
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--box-color); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary-background); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #0a1422; 
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Geolocation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../static/script.js"></script> <!-- Make sure this path is correct -->
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.getaddress.io/scripts/getaddress-location-1.1.0.min.js"></script>
+</head>
+<body onload="getLocation()">
+    <!-- <h1>HTML Geolocation</h1>
+    <p>Click the button to get your coordinates.</p> -->
+    
+    
+
+
+    <div class="container">
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search Location...">
+        </div>
+        <div class="main-content">
+            <div class="box-container">
+                <div class="box box1">
+                    <div class="content">
+                        <p>Bristol</p>
+                        <p id="time"></p>
+                        <p id="data"></p> <!-- This will display the temperature -->
+                        <p id="demo" style="display: none;"></p>
+                    </div>
+                    <div class="image-container">
+                        <img src="" alt="Weather Condition" id="weather">
+                    </div>
+                </div>
+                <div class="box">Today's Forecast
+                    <div class="forecast-container">
+                        <div class="forecast-box">
+                            <span class="temperature">1</span>
+                            <p class="time">00:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">2</span>
+                            <p class="time">01:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">3</span>
+                            <p class="time">02:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">4</span>
+                            <p class="time">03:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">5</span>
+                            <p class="time">04:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">6</span>
+                            <p class="time">05:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">7</span>
+                            <p class="time">06:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">8</span>
+                            <p class="time">07:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">9</span>
+                            <p class="time">08:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">10</span>
+                            <p class="time">09:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">11</span>
+                            <p class="time">10:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">12</span>
+                            <p class="time">11:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">13</span>
+                            <p class="time">12:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">14</span>
+                            <p class="time">13:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">15</span>
+                            <p class="time">14:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">16</span>
+                            <p class="time">15:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">17</span>
+                            <p class="time">16:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">18</span>
+                            <p class="time">17:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">19</span>
+                            <p class="time">18:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">20</span>
+                            <p class="time">19:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">21</span>
+                            <p class="time">20:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">22</span>
+                            <p class="time">21:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">23</span>
+                            <p class="time">22:00</p>
+                        </div>
+                        <div class="forecast-box">
+                            <span class="temperature">24</span>
+                            <p class="time">23:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="box">Air Conditions</div>
+            </div>
+            <div class="side-box">
+                <h2>Weekly Average Temperatures</h2>
+                <ul id="weekly-list"></ul>            
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
